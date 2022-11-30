@@ -15,6 +15,7 @@ class SearchItems extends StatelessWidget {
       distinct: true,
       converter: (Store<AppState> store) => _ViewModel.fromStore(store),
       builder: (BuildContext context, _ViewModel vm) {
+        print('SearchItems rebuild');
         return TextField(
           decoration: const InputDecoration(
             labelText: 'Search items...',

@@ -7,7 +7,7 @@ import '../redux/app_state.dart';
 import '../redux/item_list/item_list_action.dart';
 
 class NewItem extends StatefulWidget {
-  const NewItem({Key? key}) : super(key: key);
+  const NewItem({super.key});
 
   @override
   State<NewItem> createState() => _NewItemState();
@@ -28,6 +28,7 @@ class _NewItemState extends State<NewItem> {
       distinct: true,
       converter: (Store<AppState> store) => _ViewModel.fromStore(store),
       builder: (BuildContext context, _ViewModel vm) {
+        print('NewItem rebuild');
         return TextField(
           controller: _controller,
           decoration: const InputDecoration(labelText: 'Add Item'),

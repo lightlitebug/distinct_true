@@ -15,6 +15,7 @@ class ShowItems extends StatelessWidget {
       distinct: true,
       converter: (Store<AppState> store) => _ViewModel.fromStore(store),
       builder: (BuildContext context, _ViewModel vm) {
+        print('ShowItems rebuild');
         return ListView.separated(
           primary: false,
           shrinkWrap: true,
